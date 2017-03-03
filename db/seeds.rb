@@ -15,9 +15,9 @@ comments = [
 ]
 
 trips = [
-  {destination: "Santorini, Greece", description: "Enjoy sunsets and wine", details: "Fly in on a Sunday afternoon and depart Tuesday Evening", host_id: 1, arrive: Date.parse('20/8/2017'), depart: Date.parse('22/8/2017')},
-  {destination: "Athens, Greece", description: "Explore ancient Roman ruins", details: "This short trip will be filled with a lot of sightseeing", host_id: 1, arrive: Date.parse('22/8/2017'), depart: Date.parse('24/8/2017')},
-  {destination: "Lisbon, Portugal", description: "Visit prehistoric ruins from before civilization", details: "Before returning to the states, we'll relax and soak in some rays", host_id: 1, arrive: Date.parse('2/9/2017'), depart: Date.parse('4/9/2017')}
+  {destination: "Majorca, Spain", description: "Enjoy sunsets and wine", details: "Fly in on a Sunday afternoon and depart Tuesday Evening", host_id: 1, arrive: Date.parse('20/8/2017'), depart: Date.parse('22/8/2017')},
+  {destination: "Nice, France", description: "Explore ancient Roman ruins just above Marseille", details: "This short trip will be filled with a lot of sightseeing", host_id: 1, arrive: Date.parse('22/8/2017'), depart: Date.parse('24/8/2017')},
+  {destination: "Barcelona, Spain", description: "Visit the artistic skyline of Gaudi.", details: "Before returning to the states, we'll relax and soak in some rays and sangria.", host_id: 1, arrive: Date.parse('2/9/2017'), depart: Date.parse('4/9/2017')}
 ]
 
 costs = [
