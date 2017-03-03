@@ -1,0 +1,10 @@
+<h1> Trips </h1>
+
+<div class="news-feed">
+<% @trips.each do | trip | %>
+<p id="destination"><%= trip.destination %></p>
+<%= trip.description %><br>
+Depart <%= trip.arrive %><br>
+Arrive <%= trip.depart %><br><br>
+<% end %>
+</div>
