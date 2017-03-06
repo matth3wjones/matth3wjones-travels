@@ -1,14 +1,20 @@
 <div class="container">
-  <form action="/destinations/new" method="post" class="destination-form">
+  <form action="/trips" method="post" class="create-destination">
 
     <label for="destination">destination: </label>
-    <input name="destination" class="form-destination" type="text" placeholder="destination">
+    <input name="destination" class="form-input" type="text" placeholder="destination">
 
     <label for="description">description: </label>
-    <input name="description" class="form-description" type="text" placeholder="description">
+    <input name="description" class="form-input" type="text" placeholder="description">
 
     <label for="details">details: </label>
-    <input name="details" class="form-details" type="text" placeholder="details">
+    <input name="details" class="form-input" type="text" placeholder="details">
+
+    <label for="arrive">arrive: </label>
+    <input name="arrive" class="form-input" type="text" placeholder="arrive">
+
+    <label for="depart">depart: </label>
+    <input name="depart" class="form-input" type="text" placeholder="depart">
     <br>
     <input type="submit" id="form-login" value="add">
   </form>

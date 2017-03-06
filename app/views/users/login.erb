@@ -1,13 +1,13 @@
 <h2> login to your matth3wjones travels account </h2>
 <div class="container">
   <%= erb :'errors_partial', layout: false %>
-  <form action="/login" method="post" class="create-form">
+  <form action="/login" method="post" class="user-form">
 
     <label for="username">username: </label>
-    <input name="username" class="form-user" type="text" placeholder="username">
+    <input name="username" class="form-input" type="text" placeholder="username">
 
     <label for="password">password: </label>
-    <input name="password" class="form-password" type="password" placeholder="password">
+    <input name="password" class="form-input" type="password" placeholder="password">
     <br>
     <input type="submit" id="form-login" value="login">
   </form>

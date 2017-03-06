@@ -3,6 +3,7 @@
 <head>
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
+  <link href="https://fonts.googleapis.com/css?family=Codystar:300|Lalezar|Raleway:200" rel="stylesheet">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
@@ -12,7 +13,6 @@
 <body>
   <header id="fixbar">
   <div class="title-bar">matth3wjones travels</div>
-  <p>
     <a href="/"></i> Home</a>
     <% if logged_in? %>
       <a href="/users/<%= session[:id] %>">Profile</a>
@@ -21,7 +21,6 @@
       <a href="/login">Login</a>
       <a href="/users/new">Register</a>
     <% end %>
-  </p>
   </header>
   <%= yield %>
 </body>

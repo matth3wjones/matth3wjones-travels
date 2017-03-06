@@ -3,14 +3,19 @@ h1 {
   text-align: center;
   font-weight: 900;
   font-size: 4vw;
+  position: relative;
+  padding: 30px;
+  top: 5em;
+  text-align: center;
 }
 
 h2 {
   position: relative;
   padding: 30px;
-  top: 30px;
+  top: 3em;
   text-align: center;
   z-index: -1;
+  font-family: 'Lalezar', cursive;
 }
 
 .news-feed {
@@ -22,6 +27,24 @@ h2 {
 
 #destination {
   font-weight: bold;
+}
+
+#new-destination {
+  position: relative;
+  top: 7em;
+  margin: 3vw;
+  text-align: center;
+}
+
+form.create-destination {
+  background: linear-gradient(to bottom right, #0D47A1, #F50057);
+  color: #FFFFFF;
+  width: 400px;
+  padding: 15px;
+  position: relative;
+  top: 10em;
+  margin: 0 auto;
+  border-radius: 4px;
 }
 
 #description {
@@ -36,10 +59,13 @@ h2 {
   text-align: right;
   width: 100%;
   opacity: .98;
+  background: linear-gradient(to bottom right, #0D47A1, #B3E5FC);
+  color: #ffffff;
   padding: 20px;
   display: inline;
   letter-spacing: 3px;
   z-index: 1;
+  font-family: 'Raleway', sans-serif;
 }
 
 .title-bar {
@@ -48,62 +74,22 @@ h2 {
   left: 20px;
 }
 
-
-form.create-form {
+form.user-form {
   background: linear-gradient(to bottom right, #0D47A1, #F50057);
   color: #FFFFFF;
   width: 300px;
   padding: 15px;
   position: relative;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-form.restaurant-form {
-  background: linear-gradient(to bottom right, #0D47A1, #F50057);
-  color: #FFFFFF;
-  width: 400px;
-  padding: 15px;
-  position: relative;
+  top: 5em;
   margin: 0 auto;
   border-radius: 4px;
 }
 
-.form-user {
-  width: 96%;
-  position: relative;
-  margin: 3px;
-  color: black;
+#form-font {
+  font-family: 'Raleway', sans-serif;
 }
 
-.form-email {
-  width: 96%;
-  position: relative;
-  margin: 3px;
-  color: black;
-}
-
-.form-password {
-  width: 96%;
-  position: relative;
-  margin: 3px;
-  color: black;
-}
-
-.form-restaurant {
-  width: 96%;
-  position: relative;
-  margin: 3px;
-  color: black;
-}
-
-.form-location {
-  width: 96%;
-  position: relative;
-  margin: 3px;
-  color: black;
-}
-
-.form-cuisine {
+.form-input {
   width: 96%;
   position: relative;
   margin: 3px;
@@ -118,8 +104,4 @@ form.restaurant-form {
 #form-register {
   color: black;
   margin: 3px;
-}
-
-#new-restaurant {
-  text-align: center;
 }
