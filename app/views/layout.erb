@@ -10,6 +10,19 @@
   <title>matth3wjones travels</title>
 </head>
 <body>
+  <header id="fixbar">
+  <div class="title-bar">matth3wjones travels</div>
+  <p>
+    <a href="/"></i> Home</a>
+    <% if logged_in? %>
+      <a href="/users/<%= session[:id] %>">Profile</a>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    <% end %>
+  </p>
+  </header>
   <%= yield %>
 </body>
 </html>

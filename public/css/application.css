@@ -5,6 +5,14 @@ h1 {
   font-size: 4vw;
 }
 
+h2 {
+  position: relative;
+  padding: 30px;
+  top: 30px;
+  text-align: center;
+  z-index: -1;
+}
+
 .news-feed {
   position: relative;
   top: 1em;
@@ -19,4 +27,99 @@ h1 {
 #description {
   font-weight: lighter;
   color: #37474F;
+}
+
+#fixbar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  text-align: right;
+  width: 100%;
+  opacity: .98;
+  padding: 20px;
+  display: inline;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+
+.title-bar {
+  position: fixed;
+  display: inline;
+  left: 20px;
+}
+
+
+form.create-form {
+  background: linear-gradient(to bottom right, #0D47A1, #F50057);
+  color: #FFFFFF;
+  width: 300px;
+  padding: 15px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+form.restaurant-form {
+  background: linear-gradient(to bottom right, #0D47A1, #F50057);
+  color: #FFFFFF;
+  width: 400px;
+  padding: 15px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.form-user {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+.form-email {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+.form-password {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+.form-restaurant {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+.form-location {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+.form-cuisine {
+  width: 96%;
+  position: relative;
+  margin: 3px;
+  color: black;
+}
+
+#form-login {
+  color: black;
+  margin: 3px;
+}
+
+#form-register {
+  color: black;
+  margin: 3px;
+}
+
+#new-restaurant {
+  text-align: center;
 }
