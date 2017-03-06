@@ -1,5 +1,7 @@
-<p id='destination'><%= @destination.destination %><br></p>
-<p id='description'><%= @destination.description %><br></p>
-<%= @destination.details %><br>
-Depart <%= @destination.arrive.strftime('%x') %> -
-Arrive <%= @destination.depart.strftime('%x') %>
+<div id="show">
+<p id='destination'><%= @trip.destination %><br></p>
+<p id='description'><%= @trip.description %><br></p>
+<%= @trip.details %><br>
+Depart <%= @trip.arrive.strftime('%x') %> -
+Arrive <%= @trip.depart.strftime('%x') %>
+</div>

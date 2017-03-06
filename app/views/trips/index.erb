@@ -2,7 +2,7 @@
 
 <div class="news-feed">
 <% @trips.each do | trip | %>
-<p id="destination"><a href="/destinations/<%= trip.id %>" ><%= trip.destination %></p></a>
+<p id="destination"><a href="/trips/<%= trip.id %>" ><%= trip.destination %></p></a>
 <p id="description"><%= trip.description %></p>
 Depart <%= trip.arrive.strftime('%x') %> -
 Arrive <%= trip.depart.strftime('%x') %><br><br><br>

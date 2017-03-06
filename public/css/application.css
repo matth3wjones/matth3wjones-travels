@@ -105,3 +105,9 @@ form.user-form {
   color: black;
   margin: 3px;
 }
+
+#show {
+  position: relative;
+  margin: 3px;
+  top: 5em;
+}
