@@ -1,4 +1,4 @@
 get '/' do
   @trips = Trip.all
-  erb :'trip'
+  erb :'trips/index'
 end

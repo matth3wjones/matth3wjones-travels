@@ -1,16 +1,22 @@
-
-
 h1 {
   color: #37474F;
   text-align: center;
+  font-weight: 900;
+  font-size: 4vw;
 }
 
 .news-feed {
-  background: linear-gradient(#37474F, #546E7A);
-  color: #FFFFFF;
-  width: 500px;
-  padding: 15px;
   position: relative;
-  margin: 0 auto;
-  border-radius: 4px;
+  top: 1em;
+  margin: 3vw;
+  text-align: center;
+}
+
+#destination {
+  font-weight: bold;
+}
+
+#description {
+  font-weight: lighter;
+  color: #37474F;
 }
