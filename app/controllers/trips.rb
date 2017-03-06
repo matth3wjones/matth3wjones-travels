@@ -10,7 +10,7 @@ end
 
 post '/trips' do
   # if logged_in?
-  @trip = Trip.create(destination: params[:destination], description: params[:description], details: params[:details], host_id: session[:id])
+  @trip = Trip.create(destination: params[:destination], description: params[:description], details: params[:details], arrive: params[:arrive], depart: params[:depart], host_id: session[:id])
   puts params
   redirect '/trips'
 # end
