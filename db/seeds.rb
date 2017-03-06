@@ -1,11 +1,11 @@
 users = [
-  {name: "Matt", email: "matthewjones00@me.com", password: "password"},
-  {name: "Derrick", email: "derrick_ray@me.com", password: "password"},
-  {name: "Kristin", email: "kristinjones00@hotmail.com", password: "password"},
-  {name: "Jennifer", email: "jjsabel@yahoo.com", password: "password"},
-  {name: "Pat", email: "durat@yahoo.com", password: "password"},
-  {name: "Jay", email: "drjaysd@gmail.com", password: "password"},
-  {name: "Joe", email: "x9tx9t@gmai.com", password: "password"}
+  {username: "Matt", email: "matthewjones00@me.com", password: "password"},
+  {username: "Derrick", email: "derrick_ray@me.com", password: "password"},
+  {username: "Kristin", email: "kristinjones00@hotmail.com", password: "password"},
+  {username: "Jennifer", email: "jjsabel@yahoo.com", password: "password"},
+  {username: "Pat", email: "durat@yahoo.com", password: "password"},
+  {username: "Jay", email: "drjaysd@gmail.com", password: "password"},
+  {username: "Joe", email: "x9tx9t@gmai.com", password: "password"}
 ]
 
 comments = [

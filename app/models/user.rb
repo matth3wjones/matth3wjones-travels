@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
   has_many  :expenses,  foreign_key: :guest_id
   has_many  :comments, foreign_key: :guest_id
 
-  validates :name, :email, :hashword, { presence: true }
-  validates :email, uniqueness: true, format: {with: /\w+@\w+\.\w+/  }
+  validates :username, :email, :hashword, { presence: true }
+  validates :email, uniqueness: true, format: { with: /\w+@\w+\.\w+/  }
 
   def authenticate(password)
     return false if self == nil
