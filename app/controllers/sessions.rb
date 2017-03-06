@@ -8,7 +8,7 @@ post '/login' do
     session[:id] = user.id
     redirect '/users/profile'
   else
-    # alert_invalid_credentials
+    @errors = ["Sorry, the credentials do not match."]
     erb :'users/login'
   end
 end

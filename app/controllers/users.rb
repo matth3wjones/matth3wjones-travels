@@ -1,16 +1,16 @@
-get '/register' do
+get '/users/new' do
   @user = User.new
-  erb :'users/register'
+  erb :'users/new'
 end
 
-post '/register' do
+post '/users' do
   @user = User.create(params[:user])
   if @user.valid?
     redirect '/login'
   else
     @errors = @user.errors.full_messages
     status 422
-    erb :'users/login'
+    erb :'users/new'
   end
 end
 
