@@ -39,13 +39,6 @@ h2 {
   font-size: 130%;
 }
 
-#new-destination {
-  position: relative;
-  top: 7em;
-  margin: 3vw;
-  text-align: center;
-}
-
 form.create-destination {
   background: linear-gradient(to bottom right, #0D47A1, #F50057);
   color: #FFFFFF;
