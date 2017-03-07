@@ -13,12 +13,12 @@
 <body>
   <header id="fixbar">
   <div class="title-bar">matth3wjones travels</div>
-    <a href="/"></i> Home</a>
+    <a href="/"></i> Home</a> |
     <% if logged_in? %>
-      <a href="/users/<%= session[:id] %>">Profile</a>
+      <a href="/users/<%= session[:id] %>">Profile</a> |
       <a href="/logout">Logout</a>
     <% else %>
-      <a href="/login">Login</a>
+      <a href="/login">Login</a> | 
       <a href="/users/new">Register</a>
     <% end %>
   </header>

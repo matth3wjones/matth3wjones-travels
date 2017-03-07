@@ -1,7 +1,13 @@
 <div id="show">
+  <iframe
+    width="900"
+    height="350"
+    frameborder="0" style="0"
+    src="https://www.google.com/maps/embed/v1/place?q=<%=@trip.destination%>&key=AIzaSyArrSJE3KI4QDn1LIPgn-e2xO-CWHrSkLQ" allowfullscreen>
+  </iframe>
 <p id='destination'><%= @trip.destination %><br></p>
 <p id='description'><%= @trip.description %><br></p>
-<%= @trip.details %><br>
-Depart <%= @trip.arrive.strftime('%x') %> -
-Arrive <%= @trip.depart.strftime('%x') %>
+<%= @trip.details %><br><br>
+Arrive <%= @trip.arrive.strftime('%A') %>, <%= @trip.arrive.strftime('%B') %> <%= @trip.arrive.strftime('%d') %>, <%= @trip.arrive.strftime('%Y') %> -
+Depart <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %>
 </div>

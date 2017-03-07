@@ -110,4 +110,13 @@ form.user-form {
   position: relative;
   margin: 3px;
   top: 5em;
+  left: 3em;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
