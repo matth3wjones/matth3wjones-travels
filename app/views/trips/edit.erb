@@ -2,20 +2,21 @@
   #ADD ERRORS
   <form action="/trips/<%= @trip.id %>" method="post" class="create-destination">
     <input type="hidden" name="_method" value="PUT">
-    <label for="destination" id="form-font">destination: </label>
-    <input name="destination" class="form-input" type="text" value="<%= @trip.try(:destination) %>">
 
-    <label for="description" id="form-font">description: </label>
-    <input name="description" class="form-input" type="text" value="<%= @trip.try(:description) %>">
+    <label for="trip[destination]" id="form-font">destination: </label>
+    <input name="trip[destination]" class="form-input" type="text" value="<%= @trip.try(:destination) %>">
 
-    <label for="details" id="form-font">details: </label>
-    <input name="details" class="form-input" type="text" value="<%= @trip.try(:details) %>">
+    <label for="trip[description]" id="form-font">description: </label>
+    <input name="trip[description]" class="form-input" type="text" value="<%= @trip.try(:description) %>">
 
-    <label for="arrive" id="form-font">arrive: </label>
-    <input name="arrive" class="form-input" type="date" value="<%= @trip.try(:arrive) %>">
+    <label for="trip[details]" id="form-font">details: </label>
+    <input name="trip[details]" class="form-input" type="text" value="<%= @trip.try(:details) %>">
 
-    <label for="depart" id="form-font">depart: </label>
-    <input name="depart" class="form-input" type="date" value="<%= @trip.try(:depart) %>">
+    <label for="trip[arrive]" id="form-font">arrive: </label>
+    <input name="trip[arrive]" class="form-input" type="date" value="<%= @trip.try(:arrive) %>">
+
+    <label for="trip[depart]" id="form-font">depart: </label>
+    <input name="trip[depart]" class="form-input" type="date" value="<%= @trip.try(:depart) %>">
     <br>
     <input type="submit" id="form-login" value="update">
   </form>

@@ -28,7 +28,7 @@ end
 put '/trips/:id' do
   trip = Trip.find(params[:id])
   trip.update_attributes(params[:trip])
-  redirect '/trips/#{trip.}'
+  redirect "/trips/#{trip.id}"
 end
 
 delete '/trips/:id' do
