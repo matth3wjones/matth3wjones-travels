@@ -110,4 +110,21 @@ form.user-form {
   position: relative;
   margin: 3px;
   top: 5em;
+<<<<<<< Updated upstream
+=======
+  left: 3em;
+}
+
+#map {
+  position: relative;
+  top: 3.7em;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+>>>>>>> Stashed changes
 }
