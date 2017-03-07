@@ -11,5 +11,9 @@
 <%= @trip.arrive.strftime('%A') %>, <%= @trip.arrive.strftime('%B') %> <%= @trip.arrive.strftime('%d') %>, <%= @trip.arrive.strftime('%Y') %> - <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %><br>
 <p id='description'><%= @trip.description %><br></p>
 <%= @trip.details %><br><br>
+<% if current_user && @trip.host_id == current_user.id %>
+<a href="/trips/<%= @trip.id %>/edit">edit</a>
+<% end %></div><br><br>
+
 
 </div>
