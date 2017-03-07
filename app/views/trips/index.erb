@@ -13,6 +13,10 @@
     Arrive <%= trip.depart.strftime('%x') %><br><br>
     <% if current_user && trip.host_id == current_user.id %>
     <a href="/trips/<%= trip.id %>/edit">edit</a>
+    <form action="/trips/<%= trip.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+    </form>
     <% end %></div><br><br>
     <% end %>
 </div>

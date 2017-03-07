@@ -16,5 +16,6 @@ end
 
 get '/users/:id' do
   @user = User.find_by(id: params[:id])
+  @trips = Trip.all
   erb :'/users/profile'
 end

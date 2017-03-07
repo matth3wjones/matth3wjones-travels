@@ -1,5 +1,15 @@
 <h2>Welcome <%= current_user.username %></h2>
 
-<div id="new-destination">
+<% @trips.each do |trip| %>
+  <% if trip.host_id == current_user.id %>
+  <div class="post">
+    <a href="/trips/<%= trip.id %>" ><p id="destination"><%= trip.destination %></p></a>
+    <p id="description"><%= trip.description %></p>
+    <a href="/trips/<%= trip.id %>/edit">edit</a>
+  </div>
+  <% end %><br><br>
+<% end %>
+
+<div id="new-destination" class="post">
 <a href="/trips/new">suggest a destination</a>
 </div>
