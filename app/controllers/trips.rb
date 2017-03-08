@@ -17,6 +17,8 @@ end
 
 get '/trips/:id' do
   @trip = Trip.find_by(id: params[:id])
+  # @comment = Comment.find_by(trip_id: params[:id])
+  @comment = Comment.all
   erb :'trips/show'
 end
 

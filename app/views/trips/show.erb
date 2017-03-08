@@ -30,7 +30,9 @@
 </div>
 
 <div class="comments">
-  <% if current_user %>
-    <li></li>
+  <% @comment.each do |comment| %>
+    <% if comment.trip_id == @trip.id %>
+      <li><%= comment.text %>-<%= comment.author %></li>
+    <% end %>
   <% end %>
 </div>

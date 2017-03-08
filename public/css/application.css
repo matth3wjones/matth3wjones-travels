@@ -142,12 +142,13 @@ a:hover {
   float: right;
 }
 
+.comments {
+  border: 1px solid green;
+  float: right;
+}
+
 .comment-text {
   width: 230px;
   height: 150px;
   color: black;
-}
-
-.comments {
-  border: 1px solid green;
 }

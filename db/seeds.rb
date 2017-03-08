@@ -9,9 +9,9 @@ users = [
 ]
 
 comments = [
-  {trip_id: 1, guest_id: 1, text: "This trip sounds amazing"},
-  {trip_id: 1, guest_id: 2, text:"This trip is too expensive"},
-  {trip_id: 2, guest_id: 3, text:"I don't care"}
+  {trip_id: 1, user_id: 1, text: "This trip sounds amazing"},
+  {trip_id: 1, user_id: 2, text:"This trip is too expensive"},
+  {trip_id: 2, user_id: 3, text:"I don't care"}
 ]
 
 trips = [
