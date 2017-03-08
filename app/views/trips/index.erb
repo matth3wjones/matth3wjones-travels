@@ -6,17 +6,28 @@
 
 <div class="news-feed">
 <% @trips.each do | trip | %>
+  <div id="small-map">
+    <iframe
+      width="100%"
+      height="250"
+      frameborder="0" style="0"
+      src="https://www.google.com/maps/embed/v1/place?q=<%=trip.destination%>&key=AIzaSyArrSJE3KI4QDn1LIPgn-e2xO-CWHrSkLQ" allowfullscreen>
+    </iframe>
+  </div>
   <div class="post">
-  <p id="destination"><a href="/trips/<%= trip.id %>" ><%= trip.destination %></p></a>
-  <p id="description"><%= trip.description %></p>
-    Depart <%= trip.arrive.strftime('%x') %> -
-    Arrive <%= trip.depart.strftime('%x') %><br><br>
+    <p id="destination"><a href="/trips/<%= trip.id %>" ><%= trip.destination %></p></a>
+    <p id="description"><%= trip.description %></p>
+      Depart <%= trip.arrive.strftime('%x') %> -
+      Arrive <%= trip.depart.strftime('%x') %><br><br>
     <% if current_user && trip.host_id == current_user.id %>
-    <a href="/trips/<%= trip.id %>/edit">edit</a>
-    <form action="/trips/<%= trip.id %>" method="post">
-      <input type="hidden" name="_method" value="delete">
-      <input type="submit" value="delete">
-    </form>
-    <% end %></div><br><br>
+      <a href="/trips/<%= trip.id %>/edit">edit</a>
+      <form action="/trips/<%= trip.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete">
+      </form>
     <% end %>
+    </div>
+    <br>
+    <br>
+  <% end %>
 </div>

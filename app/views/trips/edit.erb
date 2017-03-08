@@ -10,7 +10,7 @@
     <input name="trip[description]" class="form-input" type="text" value="<%= @trip.try(:description) %>">
 
     <label for="trip[details]" id="form-font">details: </label>
-    <input name="trip[details]" class="form-input" type="text" value="<%= @trip.try(:details) %>">
+    <textarea name="trip[details]" class="form-input" id="tall" type="text"><%= @trip.try(:details) %></textarea>
 
     <label for="trip[arrive]" id="form-font">arrive: </label>
     <input name="trip[arrive]" class="form-input" type="date" value="<%= @trip.try(:arrive) %>">

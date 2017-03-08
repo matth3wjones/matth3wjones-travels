@@ -1,19 +1,36 @@
 <div id="map">
-<iframe
-  width="100%"
-  height="350"
-  frameborder="0" style="0"
-  src="https://www.google.com/maps/embed/v1/place?q=<%=@trip.destination%>&key=AIzaSyArrSJE3KI4QDn1LIPgn-e2xO-CWHrSkLQ" allowfullscreen>
-</iframe>
+  <iframe
+    width="100%"
+    height="350"
+    frameborder="0" style="0"
+    src="https://www.google.com/maps/embed/v1/place?q=<%=@trip.destination%>&key=AIzaSyArrSJE3KI4QDn1LIPgn-e2xO-CWHrSkLQ" allowfullscreen>
+  </iframe>
 </div>
+
 <div id="show">
-<p id='destination'><%= @trip.destination %></p>
-<%= @trip.arrive.strftime('%A') %>, <%= @trip.arrive.strftime('%B') %> <%= @trip.arrive.strftime('%d') %>, <%= @trip.arrive.strftime('%Y') %> - <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %><br>
-<p id='description'><%= @trip.description %><br></p>
-<%= @trip.details %><br><br>
-<% if current_user && @trip.host_id == current_user.id %>
-<a href="/trips/<%= @trip.id %>/edit">edit</a>
-<% end %></div><br><br>
+  <p id='destination'><%= @trip.destination %></p>
+  <%= @trip.arrive.strftime('%A') %>, <%= @trip.arrive.strftime('%B') %> <%= @trip.arrive.strftime('%d') %>, <%= @trip.arrive.strftime('%Y') %> -
+  <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %><br>
+  <p id='description'><%= @trip.description %><br></p>
+  <%= @trip.details %><br><br>
 
+  <% if current_user && @trip.host_id == current_user.id %>
+    <a href="/trips/<%= @trip.id %>/edit">edit</a><br><br>
+  <% end %>
+</div>
 
+<div class="comment">
+  <% if current_user && @trip.host_id == current_user.id %>
+  <form action="/trips/:id/comments">
+    <label for="text" id="form-font"></label>
+    <textarea name="comment[text]" class="comment-text" type="text" placeholder="comment"></textarea>
+    <input type="submit" id="form-register" value="add">
+  </form>
+  <% end %>
+</div>
+
+<div class="comments">
+  <% if current_user %>
+    <li></li>
+  <% end %>
 </div>

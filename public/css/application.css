@@ -99,6 +99,11 @@ form.user-form {
   color: black;
 }
 
+#tall {
+  height: 150px;
+  word-wrap: break-word;
+}
+
 #form-login {
   color: black;
   margin: 3px;
@@ -121,10 +126,28 @@ form.user-form {
   top: 3.7em;
 }
 
+#small-map {
+  width: 50%;
+}
+
 a:link {
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+.comment {
+  float: right;
+}
+
+.comment-text {
+  width: 230px;
+  height: 150px;
+  color: black;
+}
+
+.comments {
+  border: 1px solid green;
 }
