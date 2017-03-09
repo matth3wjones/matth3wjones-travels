@@ -10,31 +10,32 @@
 <div id="show">
   <p id='destination'><%= @trip.destination %></p>
   <%= @trip.arrive.strftime('%A') %>, <%= @trip.arrive.strftime('%B') %> <%= @trip.arrive.strftime('%d') %>, <%= @trip.arrive.strftime('%Y') %> -
-  <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %><br>
+  <%= @trip.depart.strftime('%A') %>, <%= @trip.depart.strftime('%B') %> <%= @trip.depart.strftime('%d') %>, <%= @trip.depart.strftime('%Y')  %>
   <p id='description'><%= @trip.description %><br></p>
-  <%= @trip.details %><br><br>
+  <%= @trip.details %>
 
   <% if current_user && @trip.host_id == current_user.id %>
-    <a href="/trips/<%= @trip.id %>/edit">edit</a><br><br>
+    <br><br><br><a href="/trips/<%= @trip.id %>/edit" id=>edit</a>
   <% end %>
 </div>
 
 <div class="comments">
   <% @comment.each do |comment| %>
     <% if comment.trip_id == @trip.id %>
-      <li id="wall"><%= comment.text %> - <%= comment.author %></li>
+      <div id="comment-text"><%= comment.text %>
+      <div id="comment-author">- <%= comment.author %>
+        </div>
+      </div>
     <% end %>
   <% end %>
-</div>
 
-<div class="comment">
   <% if current_user %>
-  <form action="/trips/<%= @trip.id %>/comments" method="post">
+  <form action="/trips/<%= @trip.id %>/comments" method="post" id="comment-form">
 
     <label for="text" id="form-font"></label>
     <textarea name="text" class="add-comment" type="text" placeholder="comment"></textarea>
 
-    <input type="submit" id="form-register" value="add">
+    <input type="submit" id="add-button" value="add">
   </form>
   <% end %>
 </div>

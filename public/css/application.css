@@ -30,8 +30,6 @@ h2 {
   margin: 1vw;
   width: 46%;
   height: 196px;
-  /*border: 3px solid #ECEFF1;
-  border-radius: 4px;*/
   float: left;
   position: relative;
 }
@@ -206,25 +204,49 @@ a:hover {
     text-decoration: underline;
 }
 
-.comment {
-  float: right;
+.comments {
+  position: absolute;
+  top: 27em;
+  display: inline-block;
+  width: 46%;
+  margin-left: 50%;
 }
 
-.comments {
-  /*border: 1px solid green;*/
+#comment-text {
+  padding: 2em;
+  border-bottom: 3px solid #E0F7FA;
+  width: 100%;
+  min-height: 50px;
   float: right;
+  position: relative;
+}
+
+#comment-author {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.80vw;
+  font-family: 'Raleway', sans-serif;
+}
+
+#add-button {
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  color: #0000EE;
+  }
+
+#add-button:hover {
+  text-decoration: underline;
+}
+
+#comment-form {
+  border-bottom: 3px solid #E0F7FA;
 }
 
 .add-comment {
-  width: 230px;
-  height: 150px;
-  color: black;
-  position: inherit;
-  left: 0px;
-}
-
-#wall {
-  padding: 2em;
-  background: #E0F7FA;
-  border: 2px solid #FFFFFF;
+  border: none;
+  width: 100%;
+  min-height: 50px;
 }
