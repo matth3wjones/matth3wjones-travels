@@ -12,7 +12,7 @@ h1 {
 h2 {
   position: relative;
   padding: 30px;
-  top: 3em;
+  top: 2em;
   text-align: center;
   z-index: -1;
   font-family: 'Lalezar', cursive;
@@ -25,7 +25,7 @@ h2 {
   text-align: center;
 }
 
-.post {
+.news-feed-bar {
   background: linear-gradient(to bottom right, #ECEFF1, #CFD8DC);
   border: 3px solid #607D8B;
   padding: 1vw;
@@ -34,9 +34,46 @@ h2 {
   top: 1em;
 }
 
+#profile {
+  display: inline-block;
+  width: 100%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+#profile-tile {
+  padding: 1vw;
+  margin: 1vw;
+  width: 33%;
+  height: 130px;
+  border: 3px solid #ECEFF1;
+  border-radius: 4px;
+  float: left;
+  position: relative;
+}
+
 #destination {
   font-family: 'Lalezar', cursive;
   font-size: 130%;
+}
+
+#description {
+  font-weight: lighter;
+  color: #37474F;
+}
+
+#edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.87vw;
+}
+
+#new {
+  display: block;
+  padding: 0.87vw;
+  text-align: center;
+  margin-top: 50px;
 }
 
 form.create-destination {
@@ -48,11 +85,6 @@ form.create-destination {
   top: 10em;
   margin: 0 auto;
   border-radius: 4px;
-}
-
-#description {
-  font-weight: lighter;
-  color: #37474F;
 }
 
 #fixbar {
@@ -143,12 +175,20 @@ a:hover {
 }
 
 .comments {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   float: right;
 }
 
-.comment-text {
+.add-comment {
   width: 230px;
   height: 150px;
   color: black;
+  position: inherit;
+  left: 0px;
+}
+
+#wall {
+  padding: 2em;
+  background: #E0F7FA;
+  border: 2px solid #FFFFFF;
 }

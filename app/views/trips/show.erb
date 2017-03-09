@@ -19,20 +19,22 @@
   <% end %>
 </div>
 
-<div class="comment">
-  <% if current_user && @trip.host_id == current_user.id %>
-  <form action="/trips/:id/comments">
-    <label for="text" id="form-font"></label>
-    <textarea name="comment[text]" class="comment-text" type="text" placeholder="comment"></textarea>
-    <input type="submit" id="form-register" value="add">
-  </form>
-  <% end %>
-</div>
-
 <div class="comments">
   <% @comment.each do |comment| %>
     <% if comment.trip_id == @trip.id %>
-      <li><%= comment.text %>-<%= comment.author %></li>
+      <li id="wall"><%= comment.text %> - <%= comment.author %></li>
     <% end %>
+  <% end %>
+</div>
+
+<div class="comment">
+  <% if current_user %>
+  <form action="/trips/<%= @trip.id %>/comments" method="post">
+
+    <label for="text" id="form-font"></label>
+    <textarea name="text" class="add-comment" type="text" placeholder="comment"></textarea>
+
+    <input type="submit" id="form-register" value="add">
+  </form>
   <% end %>
 </div>

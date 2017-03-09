@@ -1,15 +1,19 @@
 <h2>Welcome <%= current_user.username %></h2>
 
-<% @trips.each do |trip| %>
-  <% if trip.host_id == current_user.id %>
-  <div class="post">
-    <a href="/trips/<%= trip.id %>" ><p id="destination"><%= trip.destination %></p></a>
-    <p id="description"><%= trip.description %></p>
-    <a href="/trips/<%= trip.id %>/edit">edit</a>
-  </div>
-  <% end %><br><br>
-<% end %>
+<div id="profile">
+  <% @trips.each do |trip| %>
+    <% if trip.host_id == current_user.id %>
 
-<div class="post">
-<a href="/trips/new">suggest a destination</a>
+      <div id="profile-tile">
+        <a href="/trips/<%= trip.id %>" id="destination"><%= trip.destination %></a>
+        <p id="description"><%= trip.description %></p>
+        <a href="/trips/<%= trip.id %>/edit" id="edit">edit</a>
+      </div>
+
+    <% end %>
+  <% end %>
+
+  <div id="profile-tile">
+    <a href="/trips/new" id="new">suggest new destination</a>
+  </div>
 </div>
