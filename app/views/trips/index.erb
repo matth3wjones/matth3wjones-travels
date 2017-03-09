@@ -4,8 +4,9 @@
   <h2> all trips </h2>
 <% end %>
 
-<div class="news-feed">
+<div id="news-feed">
 <% @trips.each do | trip | %>
+
   <div id="small-map">
     <iframe
       width="100%"
@@ -14,20 +15,20 @@
       src="https://www.google.com/maps/embed/v1/place?q=<%=trip.destination%>&key=AIzaSyArrSJE3KI4QDn1LIPgn-e2xO-CWHrSkLQ" allowfullscreen>
     </iframe>
   </div>
+
   <div class="news-feed-bar">
     <p id="destination"><a href="/trips/<%= trip.id %>" ><%= trip.destination %></p></a>
     <p id="description"><%= trip.description %></p>
       Depart <%= trip.arrive.strftime('%x') %> -
-      Arrive <%= trip.depart.strftime('%x') %><br><br>
+      Arrive <%= trip.depart.strftime('%x') %>
     <% if current_user && trip.host_id == current_user.id %>
-      <a href="/trips/<%= trip.id %>/edit">edit</a>
-      <form action="/trips/<%= trip.id %>" method="post">
+      <a href="/trips/<%= trip.id %>/edit" id="edit">edit</a>
+      <form action="/trips/<%= trip.id %>" method="post" id="delete">
         <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="delete">
+        <input type="submit" value="delete" id="delete-button">
       </form>
     <% end %>
     </div>
-    <br>
-    <br>
+
   <% end %>
 </div>
