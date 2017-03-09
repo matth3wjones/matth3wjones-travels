@@ -8,6 +8,10 @@
         <a href="/trips/<%= trip.id %>" id="destination"><%= trip.destination %></a>
         <p id="description"><%= trip.description %></p>
         <a href="/trips/<%= trip.id %>/edit" id="edit">edit</a>
+        <form action="/trips/<%= trip.id %>" method="post" id="delete">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="delete" id="delete-button">
+        </form>
       </div>
 
     <% end %>

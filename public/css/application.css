@@ -21,15 +21,35 @@ h2 {
 #news-feed {
   display: inline-block;
   width: 100%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
 }
 
-.news-feed-bar {
+#news-feed-info {
   padding: 1vw;
   margin: 1vw;
   width: 46%;
-  height: 230px;
-  border: 3px solid #ECEFF1;
-  border-radius: 4px;
+  height: 196px;
+  /*border: 3px solid #ECEFF1;
+  border-radius: 4px;*/
+  float: left;
+  position: relative;
+}
+
+#news-feed-row {
+  overflow: auto;
+  padding: 17px;
+}
+
+#news-feed-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0.87;
+  padding: 0.87vw;
+}
+
+#news-feed-map {
+  width: 46%;
   float: left;
   position: relative;
 }
@@ -175,10 +195,6 @@ form.user-form {
 #map {
   position: relative;
   top: 3.7em;
-}
-
-#small-map {
-  width: 50%;
 }
 
 a:link {
